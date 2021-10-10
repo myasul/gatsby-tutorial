@@ -5,6 +5,20 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: ['gatsby-plugin-sass'],
+    siteMetadata: {
+        title: "Matthew Yasul",
+        description: "I write code, lift weights, and drink coffee",
+        author: "Matt.Y"
+    },
+    plugins: [
+    'gatsby-plugin-sass',
+    'gatsby-transformer-remark',
+    {
+        resolve: 'gatsby-source-filesystem',
+        options: {
+            name: 'src',
+            path: `${__dirname}/src/`
+        }
+    }
+    ],
 }
